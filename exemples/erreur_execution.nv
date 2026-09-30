@@ -1,0 +1,16 @@
+fn moyenne(liste) {
+    let total = 0;
+    let i = 0;
+    while i < len(liste) {
+        total = total + liste[i];
+        i = i + 1;
+    }
+    return total / len(liste);
+}
+
+fn bulletin(nom, notes) {
+    print(nom, ":", moyenne(notes));
+}
+
+bulletin("Alice", [12, 15, 9]);
+bulletin("Bob", [14, "17", 11]);

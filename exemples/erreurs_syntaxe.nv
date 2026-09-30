@@ -1,0 +1,14 @@
+let age = 20
+print(age);
+
+if age = 18 {
+    print("pile 18 ans");
+}
+
+var nom = "Myriam";
+
+fn saluer {
+    print("salut");
+}
+
+print("fin";

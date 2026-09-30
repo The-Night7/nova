@@ -1,0 +1,52 @@
+# Bienvenue dans Nova !
+
+fn fib(n) {
+    if n < 2 { return n; }
+    return fib(n - 1) + fib(n - 2);
+}
+
+let i = 0;
+while i < 10 {
+    print("fib(" + str(i) + ") =", fib(i));
+    i = i + 1;
+}
+
+# Les fonctions sont des valeurs, et elles capturent leur environnement
+fn compteur() {
+    let n = 0;
+    return fn() {
+        n = n + 1;
+        return n;
+    };
+}
+let suivant = compteur();
+suivant();
+suivant();
+print("compteur :", suivant());
+
+# Listes
+fn moyenne(liste) {
+    let total = 0;
+    let k = 0;
+    while k < len(liste) {
+        total = total + liste[k];
+        k = k + 1;
+    }
+    return total / len(liste);
+}
+let notes = [12, 15.5, 9];
+push(notes, 18);
+print("notes :", notes, "-> moyenne", moyenne(notes));
+
+# Fonctions passées en argument
+fn appliquer(f, liste) {
+    let résultat = [];
+    let k = 0;
+    while k < len(liste) {
+        push(résultat, f(liste[k]));
+        k = k + 1;
+    }
+    return résultat;
+}
+print(appliquer(fn(x) { return x * x; }, [1, 2, 3, 4]));
+print("héhé"[1], len("héhé"));

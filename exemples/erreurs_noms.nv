@@ -1,0 +1,16 @@
+fn aire(largeur, hauteur) {
+    let resultat = largeur * hauteur;
+    return largeur * hauteur;
+}
+
+let compteur = 0;
+while compteur < 3 {
+    let carre = compteur * compteur;
+    compteur = compteur + 1;
+}
+print(carre);
+
+print(compteru);
+Print(aire(2, 3));
+let total = total + 1;
+compteur == 5;
